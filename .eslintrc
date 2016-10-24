@@ -24,6 +24,10 @@
         "max-len": [2, {
           "code": 120,
           "ignoreComments": true
-        }]
+        }],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "no-unused-vars": ["error", { "varsIgnorePattern": "^h$" }],
+        "react/no-unknown-property": [2, { "ignore": ["class"] }]
     }
 }

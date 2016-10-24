@@ -1,13 +1,13 @@
 /* eslint prefer-template: 0 */
 
 import accepts from 'attr-accept';
-import React from 'react';
+import { h, Component } from 'preact';
 
 const supportMultiple = (typeof document !== 'undefined' && document && document.createElement) ?
   'multiple' in document.createElement('input') :
   true;
 
-class Dropzone extends React.Component {
+class Dropzone extends Component {
   constructor(props, context) {
     super(props, context);
     this.onClick = this.onClick.bind(this);
@@ -267,7 +267,7 @@ class Dropzone extends React.Component {
 
     return (
       <div
-        className={className}
+        class={className}
         style={appliedStyle}
         {...divProps/* expand user provided props first so event handlers are never overridden */}
         onClick={this.onClick}
@@ -295,6 +295,7 @@ Dropzone.defaultProps = {
   minSize: 0
 };
 
+/* Prop Types are not used in Preact, but are good as Documentation
 Dropzone.propTypes = {
   // Overriding drop behavior
   onDrop: React.PropTypes.func,
@@ -325,5 +326,5 @@ Dropzone.propTypes = {
   maxSize: React.PropTypes.number,
   minSize: React.PropTypes.number
 };
-
+*/
 export default Dropzone;
