@@ -5,9 +5,6 @@ logs
 # Dependency directory
 node_modules
 
-# Generated files
-dist
-
 #IDE
 .idea
 
