@@ -1,25 +1,18 @@
 {
   "name": "preact-dropzone",
   "version": "0.1.0",
-  "description": "Simple HTML5 drag-drop zone with Preeact.js",
-  "main": "src/index.js",
+  "description": "Simple HTML5 drag-drop zone with Preact.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npm run clean && webpack",
     "clean": "rimraf ./dist",
     "test": "mocha --require ./mocha-environment.js ./src/test.js",
     "eslint:src": "eslint ./src ./*.js",
     "eslint:fix": "eslint --fix",
-    "git:add": "git add",
-    "lint-staged": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint:fix",
-      "git:add"
-    ]
+    "git:add": "git add"
   },
   "pre-commit": [
-    "lint-staged"
+    "eslint:src"
   ],
   "keywords": [
     "react-component",
@@ -63,7 +56,6 @@
     "eslint-plugin-jsx-a11y": "^1.2.2",
     "eslint-plugin-react": "^5.1.1",
     "jsdom": "^9.2.1",
-    "lint-staged": "^2.0.1",
     "mocha": "^2.5.3",
     "npm-check": "^5.2.1",
     "npmpub": "^3.1.0",
